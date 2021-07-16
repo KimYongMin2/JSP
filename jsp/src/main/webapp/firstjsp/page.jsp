@@ -11,19 +11,11 @@
     <title>page</title>
 </head>
 <body>
-<%@include file="../include/top.jsp"%>
-<div id="nav">[게임][쇼핑][뉴스]</div>
+<%@include file="include/top.jsp"%>
+<%@include file="include/nav.jsp"%>
 <div id="wrap">
-    <div id="news">
-        <h3>[최신 뉴스]</h3>
-        <hr>
-        <p>코로나 발생 현황</p>
-    </div>
-    <div id="shopping">
-        <h3>[쇼핑정보] 인기상품</h3>
-        <hr>
-        <p>이것은 아이폰 13입니다</p>
-    </div>
+    <%@include file="include/news.jsp"%>
+    <%@include file="include/shopping.jsp"%>
 </div>
 </body>
 </html>
