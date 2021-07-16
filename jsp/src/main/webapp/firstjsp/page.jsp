@@ -11,7 +11,7 @@
     <title>page</title>
 </head>
 <body>
-<%@include file="include/top.jsp"%>
+<%@include file="../include/top.jsp"%>
 <div id="nav">[게임][쇼핑][뉴스]</div>
 <div id="wrap">
     <div id="news">
