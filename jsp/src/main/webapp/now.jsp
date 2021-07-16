@@ -20,5 +20,7 @@
 <%=now%>
 
 hello hi
+
+<a href="NowServlet">NowServlet</a>
 </body>
 </html>
