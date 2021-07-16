@@ -13,7 +13,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
-    <link rel="stylesheet" href="../css/myblog.css">
+    <%--http://localhost:8090/jsp_war/blog/css/myblog.css--%>
+    <link rel="stylesheet" href="/jsp_war/blog/css/myblog.css">
 </head>
 <body>
 
