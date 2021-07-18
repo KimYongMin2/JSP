@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: kym96
-  Date: 2021-07-16
-  Time: 오후 5:57
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -14,8 +8,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../script/projectscript/member.js"></script>
-    <script src="../script/projectscript/save.js"></script>
+    <script src="../script/join/member.js"></script>
+    <script src="../script/join/save.js"></script>
     <link rel="stylesheet" href="../css/naverjoincss.css">
     <title>NAVER</title>
 </head>
@@ -26,7 +20,7 @@
             <img src="../img/NAVER.png" alt="logo" class="logo">
         </div>
         <div class="join_section">
-            <form id="loginForm" action="member.jsp" class="join" method="get">
+            <form id="loginForm" action="member.jsp" class="join" method="post">
                 <label for="id" class="id_form">아이디
                     <span class="form_wrap">
                             <input type="text" id="id" name="userID">
