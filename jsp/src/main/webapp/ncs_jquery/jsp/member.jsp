@@ -85,5 +85,8 @@
 </header>
 <div id="list">
 </div>
+<div>
+    <a href="naverjoin.jsp">가입하기</a>
+</div>
 </body>
 </html>
