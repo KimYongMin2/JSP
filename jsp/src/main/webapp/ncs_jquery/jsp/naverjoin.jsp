@@ -103,10 +103,10 @@
                 </label>
                 <input type="submit" value="가입하기" class="join_btn">
             </form>
+            <a href="naverlogin.jsp">로그인하기</a>
+            <a href="memberList.jsp">리스트보기</a>
         </div>
     </div><!-- container-->
 </div><!-- wrap-->
-<div id="list">
-</div>
 </body>
 </html>

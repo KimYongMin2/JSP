@@ -31,6 +31,8 @@
         <input type="password" id="loginPW" class="pw" placeholder="비밀번호">
         <input type="submit" class="login_btn" value="로그인">
       </form>
+      <a href="naverjoin.jsp">가입하기</a>
+      <a href="memberList.jsp">리스트보기</a>
     </div>
   </div><!--container-->
 </div><!--wrap-->
