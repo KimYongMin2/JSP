@@ -1,7 +1,8 @@
 <%@ page import="java.sql.Connection" %>
 <%@ page import="bitMember.dao.BitMemberDao" %>
 <%@ page import="jdbc.util.ConnectionProvider" %>
-<%@ page import="bitMember.domain.BitMember" %><%--
+<%@ page import="bitMember.domain.BitMember" %>
+<%--
   Created by IntelliJ IDEA.
   User: kym96
   Date: 2021-07-21
@@ -37,7 +38,7 @@
 <%
 } else {
 %>
-// 노등록
+// NO등록
 <script>
     alert('오류 발생으로 등록되지 않았습니다.');
     window.history.go(-1);
