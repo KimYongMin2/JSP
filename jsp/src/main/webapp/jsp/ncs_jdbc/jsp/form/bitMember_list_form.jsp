@@ -50,7 +50,7 @@
         <td><%= list.get(i).getRegTime() %></td>
         <td>
             <a href="../jdbc/bitMember_select_by_memberId.jsp?memberId=<%= list.get(i).getMemberId() %>">수정</a>
-            <a href="#">삭제</a>
+            <a href="javascript:delDept(<%= list.get(i).getMemberId() %>)">삭제</a>
         </td>
     </tr>
     <%
@@ -58,5 +58,16 @@
         }
     %>
 </table>
+<script>
+
+    function delDept(memberId){
+
+        if(confirm('정말 삭제하시겠습니까?')) {
+            location.href = '../jdbc/bitMember_delete_delete.jsp?memberId=' + memberId
+        }
+    }
+
+</script>
+
 </body>
 </html>

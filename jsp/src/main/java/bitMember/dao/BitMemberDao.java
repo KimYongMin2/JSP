@@ -110,4 +110,25 @@ public class BitMemberDao {
 
         return result;
     }
+    public int deleteBitMember(Connection connection, String memberId){
+        int result = 0;
+
+        PreparedStatement preparedStatement = null;
+
+        String sql = "delete from bitMember where memberId=?";
+
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,memberId);
+
+            result = preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JdbcUtil.close(preparedStatement);
+        }
+
+        return result;
+    }
 }
