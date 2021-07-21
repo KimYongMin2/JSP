@@ -1,6 +1,5 @@
 <%@page import="jdbc.util.ConnectionProvider"%>
 <%@page import="dept.domain.Dept"%>
-<%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
@@ -13,7 +12,7 @@
 
     // 전달받은 부서번호로 부서정보를 가져온다
     // 1. 드라이버 로드
-    Class.forName("com.mysql.cj.jdbc.Driver");
+//    Class.forName("com.mysql.cj.jdbc.Driver");
     // 2. DB 연결
     Connection conn = null;
     PreparedStatement pstmt = null;
