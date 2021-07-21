@@ -49,7 +49,7 @@
         <td><%= list.get(i).getMemberName() %></td>
         <td><%= list.get(i).getRegTime() %></td>
         <td>
-            <a href="#">수정</a>
+            <a href="../jdbc/bitMember_select_by_memberId.jsp?memberId=<%= list.get(i).getMemberId() %>">수정</a>
             <a href="#">삭제</a>
         </td>
     </tr>

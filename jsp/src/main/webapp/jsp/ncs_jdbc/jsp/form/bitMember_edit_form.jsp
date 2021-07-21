@@ -21,6 +21,7 @@
 <hr>
 <form action="../jdbc/bitMember_edit_update.jsp" method="post">
     <table>
+        <input type="hidden" name="regTime" i value="<%= bitMember.getRegTime() %>">
         <tr>
             <td>아이디</td>
             <td><input type="text" name="memberId" value="<%= bitMember.getMemberId() %>" readonly></td>

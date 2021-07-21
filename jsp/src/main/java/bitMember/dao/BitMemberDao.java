@@ -62,4 +62,52 @@ public class BitMemberDao {
 
         return list;
     }
+
+    public BitMember selectById(Connection connection, String memberId) {
+        BitMember bitMember = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        String sql = "select * from bitMember where memberId=?";
+
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, memberId);
+
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                bitMember = new BitMember(resultSet.getString("memberId"), resultSet.getString("password"),
+                        resultSet.getString("memberName"), resultSet.getString("regTime"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JdbcUtil.close(resultSet);
+            JdbcUtil.close(preparedStatement);
+        }
+        return bitMember;
+    }
+
+    public int updateBitMember(Connection connection, BitMember bitMember){
+        int result=0;
+        PreparedStatement preparedStatement = null;
+        String sql = "update bitMember set password=?, memberName=? where memberId=?";
+
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,bitMember.getPassword());
+            preparedStatement.setString(2,bitMember.getMemberName());
+            preparedStatement.setString(3,bitMember.getMemberId());
+
+            result = preparedStatement.executeUpdate();
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        } finally {
+            JdbcUtil.close(preparedStatement);
+        }
+
+        return result;
+    }
 }
