@@ -85,4 +85,37 @@ public class MemberDao {
 
     }
 
+    public Member selectByIdPw(Connection connection, String memberId, String password){
+        Member member = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        String sql = "select * from member where memberId=? and password=?";
+
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, memberId);
+            preparedStatement.setString(2, password);
+
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()){
+                member = new Member();
+                member.setIdx(resultSet.getInt("idx"));
+                member.setMemberid(resultSet.getString("memberId"));
+                member.setPassword(resultSet.getString("password"));
+                member.setMembername(resultSet.getString("memberName"));
+                member.setRegdate(resultSet.getTimestamp("regDate"));
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            JdbcUtil.close(resultSet);
+            JdbcUtil.close(preparedStatement);
+        }
+
+        return member;
+    }
+
 }
