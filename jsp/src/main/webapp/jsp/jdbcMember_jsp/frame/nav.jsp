@@ -3,7 +3,7 @@
 <nav>
   <ul>
     <li><a href="/JSP_war/jsp/jdbcMember_jsp/regForm.jsp">회원가입</a></li>
-    <li>로그인</li>
+    <li><a href="/JSP_war/jsp/jdbcMember_jsp/loginForm.jsp">로그인</a></li>
     <li>로그아웃</li>
     <li><a href="/JSP_war/jsp/jdbcMember_jsp/member_list.jsp">회원리스트</a></li>
   </ul>

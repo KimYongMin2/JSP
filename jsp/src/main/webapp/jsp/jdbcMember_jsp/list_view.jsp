@@ -10,6 +10,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Insert title here</title>
+    <link rel="stylesheet" href="/JSP_war/jsp/jdbcMember_jsp/css/default.css">
     <style>
         td {
             text-align: center;
@@ -24,7 +25,9 @@
     </script>
 </head>
 <body>
+<%@ include file="frame/header.jsp"%>
 
+<%@ include file="frame/nav.jsp"%>
 <h1>부서 리스트</h1>
 <hr>
 

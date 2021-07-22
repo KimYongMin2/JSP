@@ -27,7 +27,7 @@
 %>
 <script>
     alert('등록되었습니다.');
-    location.href = '<%= request.getContextPath()%>/index.jsp';
+    location.href = '/JSP_war/jsp/jdbcMember_jsp/index.jsp';
 </script>
 <%
 } else {
